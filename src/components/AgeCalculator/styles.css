@@ -1,0 +1,11 @@
+.age-calculator__container { 
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    border-radius: 12px 12px 180px 12px;
+}
+
+.age-calculator__inputs-container {
+    display: flex;
+    flex-direction: row;
+}

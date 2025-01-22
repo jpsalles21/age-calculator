@@ -3,7 +3,7 @@ import './styles.css';
 const Input = ({ label, placeholder, maxLength, value, onChange }) => {
 
     const handleKeyPress = (e) => {
-        if (e.key === 'Backspace' || e.key === 'Delete') {
+        if (e.key === 'Backspace' || e.key === 'Delete' || e.key === 'Tab') {
             return; 
         }
         if (!/[0-9]/.test(e.key)) {

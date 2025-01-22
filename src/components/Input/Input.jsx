@@ -1,6 +1,6 @@
 import './styles.css';
 
-const Input = ({ label, placeholder, maxLength, value, onChange }) => {
+const Input = ({ label, placeholder, maxLength, value, onChange, error }) => {
 
     const handleKeyPress = (e) => {
         if (e.key === 'Backspace' || e.key === 'Delete' || e.key === 'Tab') {
@@ -16,7 +16,7 @@ const Input = ({ label, placeholder, maxLength, value, onChange }) => {
     }
 
     return (
-        <div className="input__container">
+        <div className={`input__container ${error ? 'input__error' : ''}`}>
             <label>{label}</label>
             <input
                 type="text"
@@ -26,6 +26,7 @@ const Input = ({ label, placeholder, maxLength, value, onChange }) => {
                 onKeyDown={handleKeyPress}
                 onChange={handleChange}
             />
+            {error && <span className="error-message">{error}</span>}
         </div>
     );
 }

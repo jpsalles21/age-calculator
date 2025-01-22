@@ -5,6 +5,8 @@ const AgeCalculatorResult = ({ year, month, day }) => {
     const currentDay = date.getDate();
    
     const calculateAge = () => {
+        if (!year || !month || !day) return "--";
+
         let yearDiff = currentYear - year;
 
         if (currentMonth < month || (currentMonth === month && currentDay < day)) {
@@ -14,6 +16,8 @@ const AgeCalculatorResult = ({ year, month, day }) => {
     };
 
     const calculateMonths = () => {
+        if (!year || !month || !day) return "--";
+
         let monthDiff = currentMonth - month;
 
         if (currentDay < day) {
@@ -26,6 +30,8 @@ const AgeCalculatorResult = ({ year, month, day }) => {
     };
 
     const calculateDays = () => {
+        if (!year || !month || !day) return "--";
+        
         const lastBirthMonthDay = new Date(currentYear, month, 0).getDate();
         let dayDiff = currentDay - day;
 

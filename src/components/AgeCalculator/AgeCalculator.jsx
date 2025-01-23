@@ -11,8 +11,11 @@ const AgeCalculator = () => {
     const [errors, setErrors] = useState({ year: '', month: '', day: '' });
 
     const validateInputs = () => {
-        const currentYear = new Date().getFullYear();
+        const date = new Date();
+        const currentYear = date.getFullYear();
         const daysInMonth = new Date(year || currentYear, month || 1, 0).getDate();
+        const currentMonth = date.getMonth() + 1;
+        const currentDay = date.getDate();
 
         let isValid = true;
         const inputError = { year: '', month: '', day: '' };
@@ -27,6 +30,15 @@ const AgeCalculator = () => {
         }
         if (!day || day < 1 || day > daysInMonth) {
             inputError.day = "Must be a valid day";
+            isValid = false;
+        }
+        if (currentYear == year && currentMonth < month) {
+            inputError.month = "Must be in the past";
+            inputError.day = "Must be in the past";
+            isValid = false;        
+        } 
+        if (currentYear == year && currentMonth == month && currentDay < day) {
+            inputError.day = "Must be in the past";
             isValid = false;
         }
 

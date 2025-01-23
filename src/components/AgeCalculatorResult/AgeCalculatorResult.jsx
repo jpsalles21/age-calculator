@@ -1,3 +1,5 @@
+import './styles.css';
+
 const AgeCalculatorResult = ({ year, month, day }) => {
     const date = new Date();
     const currentYear = date.getFullYear();
@@ -42,10 +44,10 @@ const AgeCalculatorResult = ({ year, month, day }) => {
     };
 
     return (
-        <div>
-            <p>Years: {calculateAge()}</p>
-            <p>Months: {calculateMonths()}</p>
-            <p>Days: {calculateDays()}</p>
+        <div className="age-calculator-result">
+            <p>{calculateAge()} years</p>
+            <p>{calculateMonths()} months</p>
+            <p>{calculateDays()} days</p>
         </div>
     );
 };

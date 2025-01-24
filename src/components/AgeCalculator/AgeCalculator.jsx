@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Input from "../Input/Input";
 import './styles.css';
+import IconArrow from '../../assets/icon-arrow.svg'
 import AgeCalculatorResult from '../AgeCalculatorResult/AgeCalculatorResult';
 
 const AgeCalculator = () => {
@@ -21,7 +22,7 @@ const AgeCalculator = () => {
         const inputError = { year: '', month: '', day: '' };
 
         if (!year || year > currentYear) {
-            inputError.year = "Must be in the past or a valid year";
+            inputError.year = "Must be in the past";
             isValid = false;
         }
         if (!month || month < 1 || month > 12) {
@@ -35,8 +36,8 @@ const AgeCalculator = () => {
         if (currentYear == year && currentMonth < month) {
             inputError.month = "Must be in the past";
             inputError.day = "Must be in the past";
-            isValid = false;        
-        } 
+            isValid = false;
+        }
         if (currentYear == year && currentMonth == month && currentDay < day) {
             inputError.day = "Must be in the past";
             isValid = false;
@@ -81,7 +82,11 @@ const AgeCalculator = () => {
                     onChange={setDay}
                     error={errors.day}
                 />
-                <button onClick={handleClick}>Calculate Age</button>
+            </div>
+            <div className="age-calculator__button">
+                <button onClick={handleClick}>
+                    <img src={IconArrow} alt="" />
+                </button>
             </div>
             <AgeCalculatorResult
                 year={birthDate.year}

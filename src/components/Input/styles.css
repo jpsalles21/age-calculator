@@ -1,22 +1,37 @@
-.input__container {
-    margin-bottom: 1rem;
+.input__container {  
+    display: flex;
+    flex-direction: column;
+    height: 110px
 }
 
 .input__container input {
-    padding: 0.5rem;
     border: 1px solid #ccc;
+    padding-left: 1rem;
     border-radius: 4px;
-    font-size: 1rem;
-    width: 100%;
+    font-size: 32px;
+    width: 110px;
+    font-family: var(--font-family);
+    font-weight: 600;
 }
 
 .input__container.input__error input {
     border-color: #ff4d4f;
-    background-color: #ffe6e6;
 }
 
 .error-message {
     color: #ff4d4f;
     font-size: 0.875rem;
     margin-top: 0.25rem;
+    width: 130px;
+}
+
+.input__label {
+    font-family: var(--font-family);
+    color: var(--smokey-grey);
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.input__label__error {
+    color: red;
 }

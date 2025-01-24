@@ -60,7 +60,7 @@ const AgeCalculator = () => {
                 <Input
                     label="YEAR"
                     maxLength="4"
-                    place="YYYY"
+                    placeholder="YYYY"
                     value={year}
                     onChange={setYear}
                     error={errors.year}
@@ -68,7 +68,7 @@ const AgeCalculator = () => {
                 <Input
                     label="MONTH"
                     maxLength="2"
-                    place="MM"
+                    placeholder="MM"
                     value={month}
                     onChange={setMonth}
                     error={errors.month}
@@ -76,7 +76,7 @@ const AgeCalculator = () => {
                 <Input
                     label="DAY"
                     maxLength="2"
-                    place="DD"
+                    placeholder="DD"
                     value={day}
                     onChange={setDay}
                     error={errors.day}

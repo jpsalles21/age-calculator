@@ -1,5 +1,6 @@
 import './styles.css';
 
+
 const Input = ({ label, placeholder, maxLength, value, onChange, error }) => {
 
     const handleKeyPress = (e) => {
@@ -17,7 +18,7 @@ const Input = ({ label, placeholder, maxLength, value, onChange, error }) => {
 
     return (
         <div className={`input__container ${error ? 'input__error' : ''}`}>
-            <label>{label}</label>
+            <label className={`input__label ${error ? 'input__label__error' : ''}`}>{label}</label>
             <input
                 type="text"
                 placeholder={placeholder}

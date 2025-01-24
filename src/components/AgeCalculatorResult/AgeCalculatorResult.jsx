@@ -45,10 +45,17 @@ const AgeCalculatorResult = ({ year, month, day }) => {
 
     return (
         <div className="age-calculator-result">
-            <p>{calculateAge()} years</p>
-            <p>{calculateMonths()} months</p>
-            <p>{calculateDays()} days</p>
-        </div>
+        <p>
+            <span className="result-value">{calculateAge()}</span> years
+        </p>
+        <p>
+            <span className="result-value">{calculateMonths()}</span> months
+        </p>
+        <p>
+            <span className="result-value">{calculateDays()}</span> days
+        </p>
+    </div>
+    
     );
 };
 

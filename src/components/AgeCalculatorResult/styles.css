@@ -1,3 +1,13 @@
 .age-calculator-result{
     font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 64px;
+    font-style: italic;
+    margin-left: 2.5rem;
+    line-height: 4px;
+    margin-top: 2.5rem;
+}
+
+.result-value {
+    color: var(--purple)
 }

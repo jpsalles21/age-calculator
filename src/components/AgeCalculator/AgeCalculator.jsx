@@ -66,14 +66,14 @@ const AgeCalculator = () => {
 
     return (
         <div className="age-calculator__container">
-            <div className="age-calculator__inputs-container">
+            <div className="age-calculator__inputs-container">               
                 <Input
-                    label="YEAR"
-                    maxLength="4"
-                    placeholder="YYYY"
-                    value={year}
-                    onChange={setYear}
-                    error={errors.year}
+                    label="DAY"
+                    maxLength="2"
+                    placeholder="DD"
+                    value={day}
+                    onChange={setDay}
+                    error={errors.day}
                 />
                 <Input
                     label="MONTH"
@@ -83,13 +83,13 @@ const AgeCalculator = () => {
                     onChange={setMonth}
                     error={errors.month}
                 />
-                <Input
-                    label="DAY"
-                    maxLength="2"
-                    placeholder="DD"
-                    value={day}
-                    onChange={setDay}
-                    error={errors.day}
+                 <Input
+                    label="YEAR"
+                    maxLength="4"
+                    placeholder="YYYY"
+                    value={year}
+                    onChange={setYear}
+                    error={errors.year}
                 />
             </div>
             <div className="age-calculator__button">

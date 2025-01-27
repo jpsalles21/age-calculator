@@ -1,4 +1,4 @@
-.age-calculator-result{
+.age-calculator-result {
     font-family: var(--font-family);
     font-weight: 800;
     font-size: 64px;
@@ -10,4 +10,12 @@
 
 .result-value {
     color: var(--purple)
+}
+
+@media (max-width: 768px) {
+    .age-calculator-result {
+        font-size: 50px;
+        margin-top: 5rem;
+        margin-left: 0;
+    }
 }

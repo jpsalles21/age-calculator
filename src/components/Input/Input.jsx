@@ -26,6 +26,8 @@ const Input = ({ label, placeholder, maxLength, value, onChange, error }) => {
                 value={value}
                 onKeyDown={handleKeyPress}
                 onChange={handleChange}
+                inputMode="numeric"
+                pattern="[0-9]*"
             />
             {error && <span className="error-message">{error}</span>}
         </div>

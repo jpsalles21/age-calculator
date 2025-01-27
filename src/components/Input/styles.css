@@ -12,6 +12,7 @@
     width: 110px;
     font-family: var(--font-family);
     font-weight: 600;
+    color: var(--off-black);
 }
 
 .input__container.input__error input {

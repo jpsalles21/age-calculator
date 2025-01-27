@@ -39,7 +39,7 @@ button:hover {
 @media (max-width: 768px) {
     .age-calculator__container {
         align-items: center;
-        width: 300px;
+        width: 360px;
         height: 500px;
     }
     .age-calculator__inputs-container {

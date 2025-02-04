@@ -10,17 +10,8 @@ const BirthdayCountdown = ({ month, day }) => {
     const currentYear = today.getFullYear();
     let birthday = new Date(currentYear, month - 1, day);
 
-    if (birthday < today) {
-        birthday.setFullYear(currentYear + 1);
-    }
-
     let monthsDiff = birthday.getMonth() - today.getMonth();
     let daysDiff = birthday.getDate() - today.getDate();
-
-
-    if (monthsDiff < 0) {
-        monthsDiff += 12;
-    }
 
     if (daysDiff < 0) {
         const lastMonth = new Date(birthday.getFullYear(), birthday.getMonth(), 0);

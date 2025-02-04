@@ -1,0 +1,9 @@
+.countdown p {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 2.5rem;
+    line-height: 4px;
+   
+}

@@ -3,6 +3,7 @@ import Input from "../Input/Input";
 import './styles.css';
 import IconArrow from '../../assets/icon-arrow.svg'
 import AgeCalculatorResult from '../AgeCalculatorResult/AgeCalculatorResult';
+import BirthdayCountdown from '../BirthdayCountdown/BirthdayCountdown';
 
 const AgeCalculator = () => {
     const [year, setYear] = useState('');
@@ -50,7 +51,7 @@ const AgeCalculator = () => {
         }
         if (!day) {
             inputError.day = "This field is required";
-        }        
+        }
 
         setErrors(inputError);
         return isValid;
@@ -66,7 +67,7 @@ const AgeCalculator = () => {
 
     return (
         <div className="age-calculator__container">
-            <div className="age-calculator__inputs-container">               
+            <div className="age-calculator__inputs-container">
                 <Input
                     label="DAY"
                     maxLength="2"
@@ -83,7 +84,7 @@ const AgeCalculator = () => {
                     onChange={setMonth}
                     error={errors.month}
                 />
-                 <Input
+                <Input
                     label="YEAR"
                     maxLength="4"
                     placeholder="YYYY"
@@ -102,6 +103,12 @@ const AgeCalculator = () => {
                 month={birthDate.month}
                 day={birthDate.day}
             />
+            <div>
+                <BirthdayCountdown
+                    month={birthDate.month}
+                    day={birthDate.day}
+                />
+            </div>
         </div>
     );
 };

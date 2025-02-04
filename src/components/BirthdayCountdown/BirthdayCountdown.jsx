@@ -24,7 +24,7 @@ const BirthdayCountdown = ({ month, day }) => {
 
     if (daysDiff == 0 && monthsDiff == 0) {
         return <div className="countdown">
-            <p>It's your birthday! </p>
+            <p>It's your birthday! &#x1F389;&#x1F382;&#x1F973; </p>
         </div>
     }
 

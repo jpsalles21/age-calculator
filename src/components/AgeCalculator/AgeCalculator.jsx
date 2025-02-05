@@ -45,12 +45,15 @@ const AgeCalculator = () => {
         }
         if (!year || year < 0) {
             inputError.year = "This field is required";
+            isValid = false;
         }
         if (!month) {
             inputError.month = "This field is required";
+            isValid = false;
         }
         if (!day) {
             inputError.day = "This field is required";
+            isValid = false; 
         }
 
         setErrors(inputError);
